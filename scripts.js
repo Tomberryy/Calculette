@@ -60,6 +60,10 @@ function pressOpe(operator) {
     }
 }
 
+
+//This function calculates the 2 numers in the operation
+//Only works if both numbers are defined
+//Works if you press "=" or another operator, in which case the two first numbers will be calculated and ready for another operation
 function calculate(list) {
     if (list[2] !== undefined) { //if index 2 isn't defined we probably don't need to do maths!
         tempNum = 0;
@@ -81,7 +85,7 @@ function calculate(list) {
                 tempNum = parseInt(list[0]) * parseInt(list[2]);
                 break;
         }
-        if (calcIndex !== 1){  //Check if we want the result after "=" press or and operator press
+        if (calcIndex !== 1){  //Check if we want the result after "=" press or an operator press
             document.getElementById("result").innerHTML = tempNum;
         } else {
             document.getElementById("steps").innerHTML = tempNum;
@@ -103,6 +107,10 @@ function stahp() {
 
 }
 
+/**
+ * Event listener for keypresses on numpad
+ * Calls the function associated with the keypress
+ */
 document.addEventListener('keypress', (event) => {
     var name = event.key;
     switch(name) {
@@ -155,7 +163,11 @@ document.addEventListener('keypress', (event) => {
     
   }, false);
 
-  document.addEventListener('keydown', (event) => {
+  /**
+   * Event listener for keydown
+   * Somehow, backspace doesn't work with keypress so I had to add this one just for it
+   */
+document.addEventListener('keydown', (event) => {
     var name = event.key;
     if (name === "Backspace"){
         stahp();

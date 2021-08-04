@@ -152,4 +152,12 @@ document.addEventListener('keypress', (event) => {
             calculate(calcLine);
             break;
     }
+    
   }, false);
+
+  document.addEventListener('keydown', (event) => {
+    var name = event.key;
+    if (name === "Backspace"){
+        stahp();
+    }
+}, false);

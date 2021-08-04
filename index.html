@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>My awesome website!</title>
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="topContainer">
+            <div id="steps" class="topText"></div>
+            <div id="result" class="topText"></div>
+        </div> 
+        <div class="row">
+            <div onclick="pressNum(7)" id="seven" class="button">7</div>
+            <div onclick="pressNum(8)" id="eight" class="button">8</div>
+            <div onclick="pressNum(9)" id="nine" class="button">9</div>
+            <div onclick="pressOpe('-')" id="minus" class="button">-</div>
+        </div>
+        <div class="row">
+            <div onclick="pressNum(4)" id="four" class="button">4</div>
+            <div onclick="pressNum(5)" id="five" class="button">5</div>
+            <div onclick="pressNum(6)" id="six" class="button">6</div>
+            <div onclick="pressOpe('+')" id="plus" class="button">+</div>
+        </div>
+        <div class="row">
+            <div onclick="pressNum(1)" id="one" class="button">1</div>
+            <div onclick="pressNum(2)" id="two" class="button">2</div>
+            <div onclick="pressNum(3)" id="three" class="button">3</div>
+            <div onclick="pressOpe('*')" id="times" class="button">*</div>
+        </div>
+        <div class="row">
+            <div onclick="pressNum(0)" id="zero" class="button">0</div>
+            <div onclick="stahp()" id="clear" class="button">C</div>
+            <div onclick="calculate(calcLine)" id="send" class="button">=</div>
+            <div onclick="pressOpe('/')" id="divide" class="button">/</div>
+        </div>
+    </div>
+</body>
+</html>
